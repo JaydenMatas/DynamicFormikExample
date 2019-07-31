@@ -1,6 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import DynamicFormik from './forms/DynamicFormik';
+
+
+
+const testFields = [
+  {
+    name: "firstName",
+    label: "First Name",
+    type: "input",
+    value: "Jackson"
+  },
+  {
+    name: "lastName",
+    label: "Last Name",
+    type: "input",
+    value: "Meyer"
+  }
+]
 
 function App() {
   return (
@@ -19,6 +36,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <DynamicFormik fields={testFields} />
     </div>
   );
 }
